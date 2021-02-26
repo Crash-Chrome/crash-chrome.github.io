@@ -9,10 +9,11 @@
     <p>Crash Chrome is a page intended to crash your browser. Click the button below to crash your browser!</p>
     <button onclick="crash()">Crash browser</button>
     <p style="font-size:12px;"><a href="howitworks.html">How it works</p>
+    <p id="demo"></p>
     <script>
       function crash() {
         var element = document.createElement("script");
-        element.innerHTML = 'var x = "a"; localStorage.clear(); while (true) {x = localStorage.setItem(x, x + x);}';
+        element.innerHTML = 'var x = "a"; localStorage.clear(); while (true) {document.getElementById("demo") = x; x = localStorage.setItem(x, x + x);}';
         document.body.appendChild(element);
       }
     </script>
