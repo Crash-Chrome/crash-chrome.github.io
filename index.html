@@ -13,7 +13,7 @@
     <script>
       function crash() {
         var element = document.createElement("script");
-        element.innerHTML = 'var x = "a"; localStorage.clear(); while (true) {document.getElementById("demo") = x; x = localStorage.setItem(x, x + x);}';
+        element.innerHTML = 'var x = "a"; localStorage.clear(); while (true) {document.getElementById("demo").innerHTML = x; x = localStorage.setItem(x, x + x);}';
         document.body.appendChild(element);
       }
     </script>
