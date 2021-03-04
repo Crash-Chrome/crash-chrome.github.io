@@ -5,15 +5,17 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <h1>Crash Chrome</h1>
-    <p>Crash Chrome is a page intended to crash your browser. Click the button below to crash your browser!</p>
-    <button onclick="crash()">Crash browser</button>
-    <p style="font-size:12px;"><a href="howitworks.html">How it works</a></p>
+    <div id="copy">
+      <h1>Crash Chrome</h1>
+      <p>Crash Chrome is a page intended to crash your browser. Click the button below to crash your browser!</p>
+      <button onclick="crash()">Crash browser</button>
+      <p style="font-size:12px;"><a href="howitworks.html">How it works</a></p>
+    </div>
     <p id="demo"></p>
     <script>
       var crash = () => {
         var element = document.createElement("script");
-        element.innerHTML = 'var demo = document.getElementById("demo"); function rep() {demo.innerHTML = document.body.innerHTML;} setInterval(rep, 1);';
+        element.src = "crash.js";
         document.body.appendChild(element);
       };
     </script>
