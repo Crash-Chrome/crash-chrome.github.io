@@ -1,5 +1,5 @@
 function replicate(x) {
-  if (x == 1) {
+  if (x == 0) {
     document.body.innerHTML += 
       document.body.innerHTML +
       document.body.innerHTML +
@@ -27,8 +27,8 @@ function replicate(x) {
 var i = 0;
 
 function superRep() {
-  i++;
   replicate(i);
+  i++;
 }
 
 setInterval(superRep, 1);
