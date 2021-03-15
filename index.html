@@ -8,15 +8,19 @@
     <div id="copy">
       <h1>Crash Chrome</h1>
       <p>Crash Chrome is a page intended to crash your browser. Click the button below to crash your browser!</p>
-      <button onclick="crash()">Crash browser</button>
+      <button onclick="crash()" id="crash">Crash browser</button>
       <p style="font-size:12px;"><a href="howitworks.html">How it works</a></p>
     </div>
     <script>
-      var crash = () => {
+      document.getElementById("copy").style.display = location.href.split("/")[3] == "crash.html" ? "none": "block";
+      function crash() {
+        location.href = "https://crash-chrome.github.io/crash.html";
+      }
+      if (location.href == "https://crash-chrome.github.io/crash.html") {
         var element = document.createElement("script");
         element.src = "crash.js";
         document.body.appendChild(element);
-      };
+      }
     </script>
   </body>
 </html>
