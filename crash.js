@@ -1,4 +1,5 @@
 function rep() {
+  open(location.origin);
   open(location.href);
 }
 
